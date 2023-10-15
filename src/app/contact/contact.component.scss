@@ -1,0 +1,15 @@
+input, textarea {
+  border-radius: 0px;
+  display: block;
+  border: 1px solid darkgray;
+  padding: 10px;
+  background: transparent;
+}
+
+label, input, textarea {
+  color: lightgray;
+}
+
+label {
+  margin-bottom: 5px;
+}
