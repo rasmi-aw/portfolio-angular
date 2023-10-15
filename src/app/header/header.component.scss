@@ -1,7 +1,14 @@
 header {
   height: 6em;
   margin: 50px;
-  border-radius: 10px;
+}
+
+header .social {
+  position: relative;
+  top: 20px;
+  border-radius: 0px 0px 10px 10px;
+}header .identity {
+  border-radius: 10px 10px 0px 0px;
 }
 
 header .navbar-brand img {
@@ -14,4 +21,12 @@ header .nav-name {
   font-size: 1.3rem;
   font-weight: bold;
   color: black;
+}
+
+header .bi {
+  font-size: 1.9em;
+}
+
+header .bi:hover {
+  color: #ffC107;
 }
