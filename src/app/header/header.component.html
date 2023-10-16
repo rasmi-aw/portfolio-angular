@@ -16,17 +16,19 @@
       </div>
     </nav>
     <div class="social navbar navbar-expand-lg shadow px-3 d-flex justify-content-between di">
-      <i class="bi bi-facebook"></i>
-      <i class="bi bi-instagram"></i>
-      <i class="bi bi-twitter"></i>
-      <i class="bi bi-github"></i>
+      <a [href]="linkFacebook"> <i class="bi bi-facebook"></i></a>
+      <a [href]="linkInstagram"> <i class="bi bi-instagram"></i></a>
+      <a [href]="linkTwitter"> <i class="bi bi-twitter"></i></a>
+      <a [href]="linkGithub"> <i class="bi bi-github"></i></a>
     </div>
   </div>
   <div class="col">
     <section on-click="descriptionClicker(this)" class="card card-body bg-dark shadow">
       <h3 class="text-warning">Who am i ?</h3>
-      <p class="text-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      <p class="text-light">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+        been the industry's
+        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make
+        a
         type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
         remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
         Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
