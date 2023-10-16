@@ -7,7 +7,9 @@ header .social {
   position: relative;
   top: 20px;
   border-radius: 0px 0px 10px 10px;
-}header .identity {
+}
+
+header .identity {
   border-radius: 10px 10px 0px 0px;
 }
 
@@ -29,4 +31,8 @@ header .bi {
 
 header .bi:hover {
   color: #ffC107;
+}
+
+header .bi {
+  color: #333333;
 }
