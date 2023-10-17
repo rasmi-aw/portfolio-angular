@@ -7,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   name: string | undefined;
+  job: string | undefined;
   linkGithub: string | undefined;
   linkFacebook: string | undefined;
   linkInstagram: string | undefined;
@@ -17,6 +18,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.name = "Abdelouadoud Rasmi"
+    this.job = "Java developper"
     this.linkGithub = "https://github.com/rasmi-aw"
     this.linkFacebook = "https://github.com/rasmi-aw"
     this.linkInstagram = "https://github.com/rasmi-aw"
