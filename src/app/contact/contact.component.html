@@ -5,6 +5,6 @@
   <label [textContent]="email"></label>
   <input [placeholder]="email">
   <!---->
-  <label [textContent]="content"></label>
-  <textarea [placeholder]="content" rows="3" class="w-100"></textarea>
+  <label>{{content}}</label>
+  <textarea [(ngModel)]="content" rows="3" class="w-100"></textarea>
 </div>
