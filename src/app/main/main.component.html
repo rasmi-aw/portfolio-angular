@@ -3,24 +3,26 @@
   <section>
     <h3 class="mb-3">Featured projects</h3>
     <div class="row">
-      <div *ngFor="let pr of getProjects()" class="col-4">
-        <div class="card shadow">
-          <div class="card-body">
-            <img width="100%"
-                 [src]="pr.img">
-            <h4 class="project-name">
-              {{pr.name}}
-            </h4>
-            <p>{{pr.description}}</p>
-          </div>
-          <div class="card-footer d-flex justify-content-between">
-            <div class="date">
-              {{pr.date}}
+      <ng-template ngFor let-pr [ngForOf]="getProjects()">
+        <div *ngIf="pr.featured" class="col-4">
+          <div class="card shadow">
+            <div class="card-body">
+              <img width="100%"
+                   [src]="pr.img">
+              <h4 class="project-name">
+                {{pr.name}}
+              </h4>
+              <p>{{pr.description}}</p>
             </div>
-            <a href="/" class="link">view</a>
+            <div class="card-footer d-flex justify-content-between">
+              <div class="date">
+                {{pr.date}}
+              </div>
+              <a href="/" class="link">view</a>
+            </div>
           </div>
         </div>
-      </div>
+      </ng-template>
       <!---->
     </div>
   </section>

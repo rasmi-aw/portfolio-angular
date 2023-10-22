@@ -12,21 +12,21 @@ export class MainComponent {
   public getProjects(): Project[] {
     return [
       {
-        featured: false,
+        featured: true,
         name: "Project name",
         date: "October 10th, 2023",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
       },
       {
-        featured: false,
+        featured: true,
         name: "Project name",
         date: "October 10th, 2023",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
         img: "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
       },
       {
-        featured: false,
+        featured: true,
         name: "Project name",
         date: "October 10th, 2023",
         description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
