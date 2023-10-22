@@ -3,7 +3,7 @@
   <section>
     <h3 class="mb-3">Featured projects</h3>
     <div class="row">
-      <ng-template ngFor let-pr [ngForOf]="getProjects()" [ngForTrackBy]="trackByData">
+      <ng-template ngFor let-pr [ngForOf]="projects" [ngForTrackBy]="trackByData">
         <div *ngIf="pr.featured" class="col-4">
           <div class="card shadow">
             <div class="card-body">
