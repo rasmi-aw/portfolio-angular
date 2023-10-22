@@ -26,11 +26,6 @@
         <a [href]="linkFacebook"> <i class="bi bi-facebook"></i></a>
         <a [href]="linkInstagram"> <i class="bi bi-instagram"></i></a>
         <a [href]="linkTwitter"> <i class="bi bi-twitter"></i></a>
-        <a *ngIf="linkGithub; else elseBlock">
-          <a [href]="linkGithub"> <i class="bi bi-github"></i></a>
-        </a>
-        <ng-template #elseBlock><a href="#">No git</a>
-        </ng-template>
       </div>
     </div>
   </nav>
