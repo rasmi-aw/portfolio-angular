@@ -9,7 +9,7 @@ import {ProjectSTATE} from "./project-state";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'Protfolio';
+  title: any;
   portfolio: Portfolio | undefined;
 
   ngOnInit() {
@@ -48,5 +48,6 @@ export class AppComponent implements OnInit {
           }
         ]
     }
+    this.title = this.portfolio?.fullname + ' | Portfolio'
   }
 }
