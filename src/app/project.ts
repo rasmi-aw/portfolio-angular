@@ -1,6 +1,6 @@
 export interface Project {
   name: String
-  date: Date
+  date: String
   description: String
-  img: URL
+  img: string
 }
