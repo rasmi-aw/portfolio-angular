@@ -1,5 +1,10 @@
 <div appBodyStyle>
-  <app-header></app-header>
+  <app-header [fullname]="portfolio?.fullname"
+              [job]="portfolio?.job"
+              [linkFacebook]="portfolio?.linkFacebook"
+              [linkInstagram]="portfolio?.linkInstagram"
+              [linkTwitter]="portfolio?.linkTwitter"
+              [linkGithub]="portfolio?.linkGithub"></app-header>
   <app-main [projects]="portfolio?.projects"></app-main>
   <app-footer></app-footer>
 </div>

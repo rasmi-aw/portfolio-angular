@@ -17,6 +17,10 @@ export class AppComponent implements OnInit {
       fullname: "Abdelouadoud Rasmi",
       job: "Java developer",
       description: "",
+      linkGithub: "https://github.com/rasmi-aw",
+      linkTwitter: "https://github.com/rasmi-aw",
+      linkInstagram: "https://github.com/rasmi-aw",
+      linkFacebook: "https://github.com/rasmi-aw",
       projects:
         [
           {
