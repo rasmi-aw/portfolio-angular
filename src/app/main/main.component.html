@@ -18,6 +18,20 @@
               <div class="date">
                 {{pr.date}}
               </div>
+              <div [ngSwitch]="pr.state">
+                <div *ngSwitchCase="ProjectSTATE.NOT_STARTED" class="project-state">
+                  not started
+                </div>
+                <div *ngSwitchCase="ProjectSTATE.ON_GOING" class="project-state">
+                  ongoing...
+                </div>
+                <div *ngSwitchCase="ProjectSTATE.FINISHED"  class="project-state">
+                  finished
+                </div>
+                <div *ngSwitchDefault>
+                  finished
+                </div>
+              </div>
               <a href="/" class="link">view</a>
             </div>
           </div>
