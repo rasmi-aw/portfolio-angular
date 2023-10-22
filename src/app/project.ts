@@ -1,6 +1,7 @@
 export interface Project {
-  name: String
-  date: String
-  description: String
-  img: string
+  name: string
+  date: string
+  description: string
+  img: string,
+  featured: boolean
 }
