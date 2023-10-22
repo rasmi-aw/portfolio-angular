@@ -23,7 +23,26 @@ main section .project-name {
 }
 
 .project-state {
+  text-transform: capitalize;
   font-size: 0.8em;
   color: black;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+}
+
+.state-finished {
+  color: limegreen;
+  background-color: #00ff0022;
+}
+
+.state-ongoing {
+  color: red;
+  background-color: #ff000022;
+}
+
+.state-not-started {
+  color: #ffC107;
+  background-color: #ffC10722;
 }
 

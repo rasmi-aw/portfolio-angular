@@ -14,21 +14,21 @@
               </h4>
               <p>{{pr.description}}</p>
             </div>
-            <div class="card-footer d-flex justify-content-between">
+            <div class="card-footer d-flex justify-content-between align-items-center">
               <div class="date">
                 {{pr.date}}
               </div>
               <div [ngSwitch]="pr.state">
-                <div *ngSwitchCase="ProjectSTATE.NOT_STARTED" class="project-state">
+                <div *ngSwitchCase="ProjectSTATE.NOT_STARTED" class="project-state state-not-started">
                   not started
                 </div>
-                <div *ngSwitchCase="ProjectSTATE.ON_GOING" class="project-state">
+                <div *ngSwitchCase="ProjectSTATE.ON_GOING" class="project-state state-ongoing">
                   ongoing...
                 </div>
-                <div *ngSwitchCase="ProjectSTATE.FINISHED"  class="project-state">
+                <div *ngSwitchCase="ProjectSTATE.FINISHED" class="project-state state-finished">
                   finished
                 </div>
-                <div *ngSwitchDefault>
+                <div *ngSwitchDefault class="project-state state-finished">
                   finished
                 </div>
               </div>
