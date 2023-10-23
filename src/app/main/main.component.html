@@ -4,7 +4,7 @@
     <h3 class="mb-3">Featured projects</h3>
     <div class="row">
       <ng-template ngFor let-pr [ngForOf]="projects" [ngForTrackBy]="trackByData">
-        <div *ngIf="pr.featured" class="col-4">
+        <div *ngIf="pr.featured" class="col-4 mb-3">
           <div class="card shadow">
             <div class="card-body">
               <img width="100%"
@@ -39,8 +39,7 @@
       </ng-template>
       <!---->
       <ng-template [ngIf]="gitData">
-        <h1>Github projects</h1>
-        <h1>{{gitData.login}}</h1>
+        <h3 class="my-3">Github projects <span class="small text-muted">({{gitData.public_repos}})</span></h3>
       </ng-template>
     </div>
   </section>
