@@ -14,6 +14,7 @@ import {GithubApiServiceService} from "../github-api-service.service";
 export class MainComponent implements OnInit {
   @Input() projects: any
   @Input() linkGithub: any
+  gitData: any
 
   constructor(private gitApi: GithubApiServiceService) {
   }
@@ -24,7 +25,8 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.gitApi.getProjects(this.linkGithub, (resp: any) => {
-      alert(JSON.stringify(resp));
+      this.gitData = resp
+      alert(resp.login)
     });
   }
 

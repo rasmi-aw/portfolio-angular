@@ -7,7 +7,8 @@ import {FooterComponent} from './footer/footer.component';
 import {MainComponent} from './main/main.component';
 import {ContactComponent} from './contact/contact.component';
 import {FormsModule} from "@angular/forms";
-import { BodyStyleDirective } from './body-style.directive';
+import {BodyStyleDirective} from './body-style.directive';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,11 +17,12 @@ import { BodyStyleDirective } from './body-style.directive';
     FooterComponent,
     MainComponent,
     ContactComponent,
-    BodyStyleDirective
+    BodyStyleDirective,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

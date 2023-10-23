@@ -38,6 +38,10 @@
         </div>
       </ng-template>
       <!---->
+      <ng-template [ngIf]="gitData">
+        <h1>Github projects</h1>
+        <h1>{{gitData.login}}</h1>
+      </ng-template>
     </div>
   </section>
 </main>
