@@ -26,7 +26,6 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.gitApi.getProjects(this.linkGithub, (resp: any) => {
       this.gitData = resp
-      alert(resp.login)
     });
   }
 
