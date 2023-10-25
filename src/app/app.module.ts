@@ -9,7 +9,9 @@ import {ContactComponent} from './contact/contact.component';
 import {FormsModule} from "@angular/forms";
 import {BodyStyleDirective} from './body-style.directive';
 import {HttpClientModule} from "@angular/common/http";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {RouterLink, RouterLinkActive} from "@angular/router";
 
 @NgModule({
   declarations: [
@@ -24,7 +26,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    RouterLink,
+    RouterLinkActive
   ],
   providers: [],
   bootstrap: [AppComponent]
