@@ -4,6 +4,7 @@ import {ProjectSTATE} from "../project-state";
 import {ajax} from "rxjs/internal/ajax/ajax";
 import {filter, from, fromEvent} from "rxjs";
 import {GithubApiServiceService} from "../github-api-service.service";
+import {HttpErrorResponse} from "@angular/common/http";
 
 @Component({
   selector: 'app-main',
@@ -26,6 +27,8 @@ export class MainComponent implements OnInit {
   ngOnInit() {
     this.gitApi.getProjects(this.linkGithub, (resp: any) => {
       this.gitData = resp
+    }, (err: HttpErrorResponse) => {
+
     });
   }
 

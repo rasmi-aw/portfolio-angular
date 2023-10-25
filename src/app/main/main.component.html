@@ -41,6 +41,7 @@
       <ng-template [ngIf]="gitData">
         <h3 class="my-3">Github projects <span class="small text-muted">({{gitData.public_repos}})</span></h3>
       </ng-template>
+      <ng-template [ngIf]="!gitData">Couldn't load github projects...</ng-template>
     </div>
   </section>
 </main>
