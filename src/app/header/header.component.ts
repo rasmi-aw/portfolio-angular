@@ -1,9 +1,19 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {state, style, transition, animate, trigger} from '@angular/animations'
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('zoomin', [
+      state('start', style({width: "0px", height: "0px"})),
+      state('end', style({width: "100px", height: "100px"})),
+      transition("start => end", [
+        animate("2s")
+      ])
+    ])
+  ]
 })
 export class HeaderComponent {
   @Input() fullname: string | undefined;
