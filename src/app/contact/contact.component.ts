@@ -14,4 +14,8 @@ export class ContactComponent implements OnInit {
 
   }
 
+  sendEmail(input: any) {
+    alert(this.content)
+  }
+
 }

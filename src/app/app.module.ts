@@ -29,7 +29,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
