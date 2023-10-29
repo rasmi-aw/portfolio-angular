@@ -6,16 +6,14 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-  fullname = "Fullname"
   email = "Email"
-  content = "Content"
-
+  fullname = "Fullname"
+  msg = "Message"
   ngOnInit(): void {
 
   }
 
   sendEmail(input: any) {
-    alert(JSON.stringify(input))
   }
 
 }

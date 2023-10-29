@@ -6,7 +6,7 @@ import {HeaderComponent} from './header/header.component';
 import {FooterComponent} from './footer/footer.component';
 import {MainComponent} from './main/main.component';
 import {ContactComponent} from './contact/contact.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {BodyStyleDirective} from './body-style.directive';
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
@@ -25,6 +25,7 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,

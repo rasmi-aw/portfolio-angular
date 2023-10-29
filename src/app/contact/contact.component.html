@@ -1,13 +1,13 @@
 <div class="contact">
   <form #emailForm="ngForm" (ngSubmit)="sendEmail(emailForm.value)">
-    <label [textContent]="fullname"></label>
-    <input name="fullname" [placeholder]="fullname" [(ngModel)]="fullname">
+    <label>Fullname</label>
+    <input name="fullname" placeholder="fullname" [(ngModel)]="fullname">
     <!---->
-    <label>{{email}}</label>
-    <input name="email" type="email" [placeholder]="email" [(ngModel)]="email">
+    <label>Email</label>
+    <input name="email" type="email" placeholder="email" [(ngModel)]="email">
     <!---->
-    <label>{{content}}</label>
-    <textarea [(ngModel)]="content" rows="3" class="w-100"></textarea>
+    <label>Message</label>
+    <textarea name="message" rows="3" class="w-100" [(ngModel)]="msg"></textarea>
     <input type="submit" value="submit">
   </form>
 </div>
