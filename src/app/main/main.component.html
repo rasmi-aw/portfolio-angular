@@ -5,7 +5,7 @@
     <div class="row">
       <ng-template ngFor let-pr [ngForOf]="projects" [ngForTrackBy]="trackByData">
         <div *ngIf="pr.featured" class="col-4 mb-3">
-          <div class="card shadow">
+          <div (click)="alert(pr.name);" class="card shadow">
             <div class="card-body">
               <img width="100%"
                    [src]="pr.img">

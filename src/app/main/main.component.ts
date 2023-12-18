@@ -40,5 +40,6 @@ export class MainComponent implements OnInit {
 
 
   protected readonly ProjectSTATE = ProjectSTATE;
+  protected readonly alert = alert;
 }
 
