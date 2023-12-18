@@ -14,6 +14,7 @@ import {HttpErrorResponse} from "@angular/common/http";
 export class MainComponent implements OnInit {
   @Input() projects: any
   @Input() linkGithub: any
+  gitProjects: any
   gitData: any
 
   constructor(private gitApi: GithubApiServiceService) {
@@ -31,7 +32,7 @@ export class MainComponent implements OnInit {
     });
     //
     this.gitApi.getProjects(this.linkGithub.replace(/users/gi,"/"), (resp: any) => {
-      this.projects = resp
+      this.gitProjects = resp
     }, (err: HttpErrorResponse) => {
       alert(err.message)
     });

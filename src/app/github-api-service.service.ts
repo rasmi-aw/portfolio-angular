@@ -19,7 +19,9 @@ export class GithubApiServiceService {
 
 
   public getProjects(url: string, success: any, error: any): any {
-    const ur = "https://api.github.com/users/rasmi-aw/repos/";
+    const ur = "https://api.github.com/users/"
+      + new URL(url).pathname.replace(".git", "").replace("/", "").trim()
+      + "/repos";
     return this.httpReq(ur, success, error);
   }
 
