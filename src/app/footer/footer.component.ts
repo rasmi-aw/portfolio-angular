@@ -12,4 +12,8 @@ export class FooterComponent {
   @Input() linkFacebook: string | undefined;
   @Input() linkInstagram: string | undefined;
   @Input() linkTwitter: string | undefined;
+
+  sendEmail($event:any) {
+    alert($event)
+  }
 }

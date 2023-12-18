@@ -10,7 +10,6 @@ import {HttpErrorResponse} from "@angular/common/http";
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss'],
-  providers: [GithubApiServiceService]
 })
 export class MainComponent implements OnInit {
   @Input() projects: any
@@ -28,7 +27,7 @@ export class MainComponent implements OnInit {
     this.gitApi.getProjects(this.linkGithub, (resp: any) => {
       this.gitData = resp
     }, (err: HttpErrorResponse) => {
-
+      alert(err.message)
     });
   }
 

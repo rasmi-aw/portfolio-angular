@@ -3,7 +3,7 @@
     <div>
       <div class="row">
         <div class="col-auto">
-          <app-contact></app-contact>
+          <app-contact (emailChangedEvent)="sendEmail($event)"></app-contact>
         </div>
         <div class="col-auto">
           <a class="navbar-brand" href="/">
