@@ -29,6 +29,12 @@ export class MainComponent implements OnInit {
     }, (err: HttpErrorResponse) => {
       alert(err.message)
     });
+    //
+    this.gitApi.getProjects(this.linkGithub.replace(/users/gi,"/"), (resp: any) => {
+      this.projects = resp
+    }, (err: HttpErrorResponse) => {
+      alert(err.message)
+    });
   }
 
 
