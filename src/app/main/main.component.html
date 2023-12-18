@@ -10,13 +10,13 @@
               <img width="100%"
                    [src]="pr.img">
               <h4 class="project-name">
-                {{pr.name}}
+                {{ pr.name }}
               </h4>
-              <p>{{pr.description}}</p>
+              <p>{{ pr.description }}</p>
             </div>
             <div class="card-footer d-flex justify-content-between">
               <div class="date">
-                {{pr.date}}
+                {{ pr.date }}
               </div>
               <div [ngSwitch]="pr.state">
                 <div *ngSwitchCase="ProjectSTATE.NOT_STARTED" class="project-state state-not-started">
@@ -39,8 +39,32 @@
       </ng-template>
       <!---->
       <ng-template [ngIf]="gitData">
-        <h3 class="my-3">Github projects <span class="small text-muted">({{gitData.public_repos}})</span></h3>
+        <h3 class="my-3">Github projects <span class="small text-muted">({{ gitData.public_repos }})</span></h3>
       </ng-template>
+      <div style="width:100%;overflow-x:scroll;">
+        <div class="row">
+          <ng-template ngFor let-pr [ngForOf]="gitProjects" [ngForTrackBy]="trackByData">
+            <div class="col-4 mb-3">
+              <div class="card shadow">
+                <div class="card-body">
+                  <img width="100%"
+                       [src]="pr.img">
+                  <h4 class="project-name">
+                    {{ pr.name }}
+                  </h4>
+                  <p>{{ pr.description }}</p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                  <div class="date">
+                    {{ pr.date }}
+                  </div>
+                  <a href="/" class="link">view</a>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </div>
+      </div>
       <ng-template [ngIf]="!gitData">Couldn't load github projects...</ng-template>
     </div>
   </section>
