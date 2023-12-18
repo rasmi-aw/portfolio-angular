@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, Output} from '@angular/core';
 import {Portfolio} from "./portfolio";
 import {Project} from "./project";
 import {ProjectSTATE} from "./project-state";
@@ -10,7 +10,7 @@ import {ProjectSTATE} from "./project-state";
 })
 export class AppComponent implements OnInit {
   title: any;
-  portfolio: Portfolio | undefined;
+  @Output() portfolio: Portfolio | undefined;
 
   ngOnInit() {
     this.portfolio = {
