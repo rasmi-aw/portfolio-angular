@@ -20,10 +20,10 @@
       <a *ngIf="linkFacebook" [href]="linkFacebook"> <i class="bi bi-facebook"></i></a>
       <a *ngIf="linkInstagram" [href]="linkInstagram"> <i class="bi bi-instagram"></i></a>
       <a *ngIf="linkTwitter" [href]="linkTwitter"> <i class="bi bi-twitter"></i></a>
-      <a *ngIf="linkGithub; else elseBlock">
+      <a *ngIf="!linkGithub; else elseBlock">
         <a [href]="linkGithub"> <i class="bi bi-github"></i></a>
       </a>
-      <ng-template #elseBlock><a href="#">No git</a>
+      <ng-template #elseBlock><span [attr.title]="'no github account associated'" [style.color]="'#ff0000'">No git</span>
       </ng-template>
     </div>
   </div>
