@@ -7,8 +7,8 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a id="name" class="nav-link nav-name " href="#name" [title]="job">{{fullname}}</a>
-            <p class="mx-2">{{job}}</p>
+            <a id="name" class="nav-link nav-name " href="#name" [title]="job">{{ fullname }}</a>
+            <p class="mx-2">{{ job }}</p>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#"></a>
@@ -17,9 +17,9 @@
       </div>
     </nav>
     <div class="social navbar navbar-expand-lg shadow px-3 d-flex justify-content-between di">
-      <a [href]="linkFacebook"> <i class="bi bi-facebook"></i></a>
-      <a [href]="linkInstagram"> <i class="bi bi-instagram"></i></a>
-      <a [href]="linkTwitter"> <i class="bi bi-twitter"></i></a>
+      <a *ngIf="linkFacebook" [href]="linkFacebook"> <i class="bi bi-facebook"></i></a>
+      <a *ngIf="linkInstagram" [href]="linkInstagram"> <i class="bi bi-instagram"></i></a>
+      <a *ngIf="linkTwitter" [href]="linkTwitter"> <i class="bi bi-twitter"></i></a>
       <a *ngIf="linkGithub; else elseBlock">
         <a [href]="linkGithub"> <i class="bi bi-github"></i></a>
       </a>
