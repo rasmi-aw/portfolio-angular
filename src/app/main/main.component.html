@@ -44,7 +44,7 @@
       <div style="width:100%;overflow-x:scroll;">
         <div class="row">
           <ng-template ngFor let-pr [ngForOf]="gitProjects" [ngForTrackBy]="trackByData">
-            <div class="col-4 mb-3">
+            <div (click)="alert(pr.name);" class="col-4 mb-3">
               <div class="card shadow">
                 <div class="card-body">
                   <img width="100%"
@@ -56,7 +56,7 @@
                 </div>
                 <div class="card-footer d-flex justify-content-between">
                   <div class="date">
-                    {{ pr.date }}
+                    {{ pr.date | uppercase }}
                   </div>
                   <a href="/" class="link">view</a>
                 </div>
