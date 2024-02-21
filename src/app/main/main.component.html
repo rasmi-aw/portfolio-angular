@@ -53,7 +53,7 @@
                 </div>
                 <div class="card-footer d-flex justify-content-between">
                   <div class="date">
-                    {{ pr.date | uppercase }}
+                    {{ pr.created_at | date | uppercase }}
                   </div>
                   <a href="/" class="link">view</a>
                 </div>
