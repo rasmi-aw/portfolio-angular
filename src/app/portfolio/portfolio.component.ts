@@ -1,6 +1,7 @@
 import {Component, OnInit, Output} from '@angular/core';
 import {Portfolio} from "../portfolio";
 import {ProjectSTATE} from "../project-state";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-portfolio',
@@ -11,6 +12,9 @@ export class PortfolioComponent implements OnInit {
 
   title: any;
   @Output() portfolio: Portfolio | undefined;
+
+  constructor(private router: Router) {
+  }
 
   ngOnInit() {
     this.portfolio = {
@@ -54,4 +58,5 @@ export class PortfolioComponent implements OnInit {
     }
     this.title = this.portfolio?.fullname + ' | Portfolio'
   }
+
 }

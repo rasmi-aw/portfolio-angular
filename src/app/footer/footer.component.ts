@@ -1,4 +1,5 @@
 import {Component, Input} from '@angular/core';
+import {NavigationService} from "../navigation.service";
 
 @Component({
   selector: 'app-footer',
@@ -13,7 +14,15 @@ export class FooterComponent {
   @Input() linkInstagram: string | undefined;
   @Input() linkTwitter: string | undefined;
 
-  sendEmail($event:any) {
+  constructor(private navigationService: NavigationService) {
+  }
+
+  sendEmail($event: any) {
     alert($event)
+  }
+
+
+  toAbout(): void {
+    this.navigationService.to("about")
   }
 }
