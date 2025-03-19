@@ -1,0 +1,15 @@
+<div appBodyStyle>
+  <app-header [fullname]="portfolio?.fullname"
+              [job]="portfolio?.job"
+              [linkFacebook]="portfolio?.linkFacebook"
+              [linkInstagram]="portfolio?.linkInstagram"
+              [linkTwitter]="portfolio?.linkTwitter"
+              [linkGithub]="portfolio?.linkGithub"></app-header>
+  <app-main [linkGithub]="portfolio?.linkGithub" [projects]="portfolio?.projects"></app-main>
+  <app-footer [fullname]="portfolio?.fullname"
+              [job]="portfolio?.job"
+              [linkFacebook]="portfolio?.linkFacebook"
+              [linkInstagram]="portfolio?.linkInstagram"
+              [linkTwitter]="portfolio?.linkTwitter"
+              [linkGithub]="portfolio?.linkGithub"></app-footer>
+</div>

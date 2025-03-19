@@ -11,7 +11,9 @@ import {BodyStyleDirective} from './body-style.directive';
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
-import {RouterLink, RouterLinkActive} from "@angular/router";
+import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import { AboutComponent } from './about/about.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
     MainComponent,
     ContactComponent,
     BodyStyleDirective,
+    AboutComponent,
+    PortfolioComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +34,9 @@ import {RouterLink, RouterLinkActive} from "@angular/router";
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterLink,
-    RouterLinkActive],
+    RouterLinkActive,
+    RouterOutlet
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
