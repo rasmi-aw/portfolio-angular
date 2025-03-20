@@ -40,8 +40,7 @@
       </ng-template>
       <div style="width:100%;overflow-x:scroll;">
         <div class="row">
-          <ng-template ngFor let-pr [ngForOf]="gitProjects" [ngForTrackBy]="trackByData">
-            <div (click)="alert(pr.name);" class="col-4 mb-3">
+          <div *ngFor="let pr of gitProjects$ | async" (click)="alert(pr.name)" class="col-4 mb-3">
               <div class="card shadow">
                 <div class="card-body">
                   <img width="100%"
@@ -59,10 +58,9 @@
                 </div>
               </div>
             </div>
-          </ng-template>
         </div>
       </div>
-      <ng-template [ngIf]="!gitData">Couldn't load github projects...</ng-template>
+<!--      <ng-template [ngIf]="!gitData">Couldn't load github projects...</ng-template>-->
     </div>
   </section>
 </main>

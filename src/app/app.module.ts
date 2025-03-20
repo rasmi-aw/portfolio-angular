@@ -12,8 +12,12 @@ import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
-import { AboutComponent } from './about/about.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
+import {AboutComponent} from './about/about.component';
+import {PortfolioComponent} from './portfolio/portfolio.component';
+import {StoreModule} from '@ngrx/store';
+import {EffectsModule} from '@ngrx/effects';
+import {loadProjectsReducer} from "./state/github.reducers";
+import {GithubEffects} from "./state/github.effects";
 
 @NgModule({
   declarations: [
@@ -35,7 +39,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     AppRoutingModule,
     RouterLink,
     RouterLinkActive,
-    RouterOutlet
+    RouterOutlet,
+    StoreModule.forRoot({projects: loadProjectsReducer}, {}),
+    EffectsModule.forRoot([GithubEffects])
   ],
   providers: [],
   bootstrap: [AppComponent]
