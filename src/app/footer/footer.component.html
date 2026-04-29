@@ -12,7 +12,7 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a id="name" class="nav-link nav-name" href="#name">{{fullname | titlecase}}</a>
+                <a id="name" class="nav-link nav-name" href="#name">{{ fullname | titlecase }}</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#"></a>
@@ -26,6 +26,7 @@
         <a [href]="linkFacebook"> <i class="bi bi-facebook"></i></a>
         <a [href]="linkInstagram"> <i class="bi bi-instagram"></i></a>
         <a [href]="linkTwitter"> <i class="bi bi-twitter"></i></a>
+        <button (click)="toAbout()"> <i class="bi bi-twitter"></i></button>
       </div>
     </div>
   </nav>
