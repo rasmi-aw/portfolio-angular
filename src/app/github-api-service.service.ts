@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {ajax} from "rxjs/internal/ajax/ajax";
-import {HttpClient, HttpHeaders} from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import {catchError, retry} from "rxjs";
 
 @Injectable({

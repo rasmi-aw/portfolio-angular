@@ -4,7 +4,7 @@ import {ProjectSTATE} from "../project-state";
 import {ajax} from "rxjs/internal/ajax/ajax";
 import {filter, from, fromEvent} from "rxjs";
 import {GithubApiServiceService} from "../github-api-service.service";
-import {HttpErrorResponse} from "@angular/common/http";
+import { HttpErrorResponse } from "@angular/common/http";
 import {load, loadSuccess} from "../state/github.actions";
 import {Store} from "@ngrx/store";
 

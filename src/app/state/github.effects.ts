@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {Actions, createEffect, ofType} from "@ngrx/effects";
-import {HttpClient} from "@angular/common/http";
+import { HttpClient } from "@angular/common/http";
 import {load, loadFailed, loadSuccess} from "./github.actions";
 import {catchError, map, mergeMap, of, retry} from "rxjs";
 import {Project} from "../project";
